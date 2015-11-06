@@ -1,33 +1,24 @@
 $(document).ready(function(){
 	$("#btn_cv").click(function(){
 		show_info("cv");
-		//hide_mainbar();
-		//hide_all();
-		//$("#cv").show();
 	});
 
 	$("#btn_social_network").click(function(){
 		show_info("social_network");
-		//hide_mainbar();
-		//hide_all();
-		//$("#social_network").show();
 	});
 	
 	$("#btn_code_repo").click(function(){
 		show_info("code_repo");
-		//hide_mainbar();
-		//hide_all();
-		//$("#code_repo").show();
 	});
 	
 	$("#btn_contact").click(function(){
 		show_info("contact");
-		//hide_mainbar();
-		//hide_all();
-		//$("#contact").show();
 	});
 });
 
+/*
+Function to show the content clicked by the user and suppress the mainpage.
+*/
 function show_info(id) {
 	hide_mainbar();
 	hide_all();
