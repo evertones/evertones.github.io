@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Everton Eckert Schneider</title>
+	
+	<!-- Bootstrap Libraries -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	<!-- i18next Library -->
+	<!--script src="http://i18next.com/public/download/latest/i18next.js"></script-->
+	
+	<!-- Page Javascript (JS) and Style Sheet (CSS) -->
+	<script src="script/script.js"></script>
+	<link rel="stylesheet" href="style/styles.css" type="text/css" />
+</head>
+<body class="cor">
+
+	<div class="container">
+		<!-- Esta página está disponível nos seguintes idiomas: -->
+		<div id="smallbar" class="row well well-sm" style="display: none;">
+			<div class="col-md-2 text-center">
+				<span class="glyphicon glyphicon-circle-arrow-up" style="font-size: 30px;" onclick="show_mainpage();"></span>
+				<br />
+				<span style="font-size: 9px;">Click the arrow to return</span>
+			</div>
+			<div class="col-md-8 text-center">
+				<h3>Éverton Eckert Schneider <small>System Developer, System Analyst</small></h3>
+			</div>
+			<div class="col-md-2 text-center">
+				<span class="glyphicon glyphicon-circle-arrow-up" style="font-size: 30px;" onclick="show_mainpage();"></span>
+				<br />
+				<span style="font-size: 9px;">Click the arrow to return</span>
+			</div>
+		</div>
+		
+		<div id="languages" class="well well-sm text-right">
+			<!--span data-i18n="page.idioms"></span-->
+			<span>Change language:</span>
+			&nbsp;
+			<img id="img_ptBR" src="img/lang/pt-BR_small.png" height="20" />
+			&nbsp;
+			<img id="img_enUS" src="img/lang/en-US_small.png" height="20" />
+		</div>
+	
+		<div id="myself" class="row">
+			<div class="col-md-3">
+				<img src="img/myself.png" class="img-rounded" alt="This is me!" width="100%">
+			</div>
+			<div class="col-md-9">
+				<div class="jumbotron">
+					<h1>Éverton Eckert Schneider</h1>      
+					<p>System Developer, System Analyst</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3">
+				<button id="btn_cv" class="btn btn-info btn-block"><span class="glyphicon glyphicon-file"></span> Curricum Vitae </button>
+				<br />
+				<h5><i>Here you can find my CV with details about my profession experience.</i></h5>
+			</div>
+			<div class="col-md-3">        
+				<button id="btn_social_network" class="btn btn-success btn-block"><span class="glyphicon glyphicon-user"></span> Social Networks </button>
+				<br />
+				<h5><i>Here you can find networks I participate to check extra information (if wanted).</i></h5>
+			</div>
+			<div class="col-md-3">        
+				<button id="btn_code_repo" class="btn btn-warning btn-block"><span class="glyphicon glyphicon-search"></span> Code Repo </button>
+				<br />
+				<h5><i>Here you can find some code I've written.</i></h5>
+			</div>
+			<div class="col-md-3">        
+				<button id="btn_contact" class="btn btn-danger btn-block"><span class="glyphicon glyphicon-envelope"></span> Contact </button>
+				<br />
+				<h5><i>Here you can find a way to get in touch.</i></h5>
+			</div>
+		</div>
+		
+		<br />
+		
+		<div class="row" style="border-bottom: solid 1px black;">
+		</div>
+		
+		<br />
+		
+		<div id="cv" class="row" style="display: none">
+			<div class="col-md-12">
+				<h3>Item 1</h3>
+				<p>Description item 1 ....</p>
+				<br />
+				<br />
+				
+				<h3>Item 2</h3>
+				<p>Description item 2 ....</p>
+				<br />
+				<br />
+				
+				<h3>Item 3</h3>
+				<p>Description item 3 ....</p>
+				<br />
+				<br />
+				
+				<h3>Item 4</h3>
+				<p>Description item 4 ....</p>
+				<br />
+				<br />
+			</div>
+		</div>
+		
+		<div id="social_network" class="row" style="display: none">			
+			<div class="col-md-6">
+			</div>
+			<div class="col-md-6 text-right">
+				<a href="https://www.linkedin.com/in/evertonschneider" target="_blank"><img src="img/icons/linkedin-icon.png" width="30px" /></a> &nbsp;
+				<a href="http://www.meetup.com/pt/members/189347405/" target="_blank"><img src="img/icons/meetup-icon.png" width="30px" /></a> &nbsp;
+				<a href="https://github.com/evertones" target="_blank"><img src="img/icons/github-icon.png" width="30px" /></a> &nbsp;
+				<a href="https://www.facebook.com/everton.schneider" target="_blank"><img src="img/icons/facebook-icon.png" width="30px" /></a> &nbsp;
+				<a href="https://instagram.com/everton_es/" target="_blank"><img src="img/icons/instagram-icon.png" width="30px" /></a> &nbsp;
+				<a href="https://www.flickr.com/photos/everton_es" target="_blank"><img src="img/icons/flickr-icon.png" width="30px" /></a> &nbsp;
+			</div>
+		</div>
+		
+		<div id="code_repo" class="row" style="display: none">
+			<div class="col-md-12">
+				<h3>Code Repo ...</h3>
+				<p>Github projects ....</p>
+				<br />
+				<br />
+			</div>
+		</div>
+		
+		<div id="contact" class="row" style="display: none">
+			<form role="form">
+				<div class="form-group">
+					<label for="name">Your name:</label>
+					<input type="text" class="form-control" id="name" placeholder="Enter your name">
+				</div>
+				<div class="form-group">
+					<label for="email">Your e-mail:</label>
+					<input type="email" class="form-control" id="email" placeholder="Enter e-mail">
+				</div>
+				<div class="form-group">
+					<label for="subject">Subject:</label>
+					<input type="text" class="form-control" id="subject" placeholder="Enter the subject">
+				</div>
+				<div class="form-group">
+					<label for="message">Message:</label>
+					<textarea class="form-control" rows="5" id="message" placeholder="Enter the message"></textarea>
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+			<br />
+		</div>
+	</div>
+	
+	
+	<!-- Code for internationalization (i18n) -->
+	<!--script>
+		// Lib initialization
+		i18n.init({
+			fallbackLng: false // fallback - when language is not defined
+			,debug: true // plugin debug
+			,fixLng: true // keep cookie when a language is selected
+			,load: 'current'
+		},
+
+		function(translation) {
+			$('[data-i18n]').i18n();
+			var appName = translation('app.name');
+		});
+		
+		// English
+		$('#btn-en').on('click', function() {
+			i18n.setLng('img_enUS', {fixLng: true}, function(translation){
+				$('[data-i18n]').i18n();
+			});
+		});
+		// Portuguese
+		$('#btn-pt').on('click', function() {
+			i18n.setLng('img_ptBR', {fixLng: true}, function(translation){
+				$('[data-i18n]').i18n();
+			});
+		});
+	</script-->
+
+</body>
+</html>

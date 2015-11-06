@@ -1,0 +1,16 @@
+{
+	"app": {
+		"name" : "i18next"
+	}
+	,"page" : {
+		"idioms" : "Alterar idioma: "
+		,"name" : "Everton Eckert Schneider"
+		,"role" : "Desenvolvedor de Sistemas, Analista de Sistemas"
+	}
+	,"button" : {
+		"resume" : "Resume"
+		,"socialnetworks" : "Redes Sociais"
+		,"coderepo" : "Code Repo"
+		,"contact" : "Contato"
+	}
+}
