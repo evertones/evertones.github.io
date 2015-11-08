@@ -132,7 +132,7 @@
 				<div class="cv">
 					<h4><span class="glyphicon glyphicon-map-marker"></span> HCPA - Hospital de Clínicas de Porto Alegre <small>(University Hospital) - Dec/2009 to Sep/2015</small></h4>
 					<div class="cv">
-						At HCPA I was part of a development team working to migrate the organization legacy system from Oracle technologies dto J2EE and deploy it to more than 40 University Hospitals in Brazil. <br />
+						At HCPA I was part of a development team working to migrate the organization legacy system from Oracle technologies to J2EE and deploy it to more than 40 University Hospitals in Brazil. <br />
 						I started as a system developer, but changed to different roles during the project. <br />
 						During almost 6 years my responsabilities were: <br />
 						<ul>
@@ -214,39 +214,36 @@
 		</div>
 		
 		<div id="code_repo" class="row content">
-			<div class="col-md-4">
-				<h3>Code Repo ...</h3>
-				<p>Github projects ....</p>
-				<br />
-				<br />
-			</div>
-			<div class="col-md-8">
-				<h3>Code Repo ...</h3>
-				<p>Github projects ....</p>
-				<br />
-				<br />
+			<div class="col-md-12">
+					<h3>Code Repo</h3>
+					<div class="cv">
+						This space is dedicated to show and explain some details of each code pushed to Github. <br />
+						Click on the project to see its information.
+					<br />
+				</div>
 			</div>
 		</div>
 		
 		<div id="contact" class="row content">
-			<form role="form">
+			<form role="form" method="post" action="send_mail.php">
 				<div class="form-group">
 					<label for="name">Your name:</label>
-					<input type="text" class="form-control" id="name" placeholder="Enter your name">
+					<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" maxlength="50" required>
 				</div>
 				<div class="form-group">
 					<label for="email">Your e-mail:</label>
-					<input type="email" class="form-control" id="email" placeholder="Enter e-mail">
+					<input type="email" class="form-control" id="email" name="email" placeholder="Enter e-mail" maxlength="50" required>
 				</div>
 				<div class="form-group">
 					<label for="subject">Subject:</label>
-					<input type="text" class="form-control" id="subject" placeholder="Enter the subject">
+					<input type="text" class="form-control" id="subject" name="subject" placeholder="Enter the subject" maxlength="80" required>
 				</div>
 				<div class="form-group">
 					<label for="message">Message:</label>
-					<textarea class="form-control" rows="5" id="message" placeholder="Enter the message"></textarea>
+					<textarea class="form-control" rows="5" maxlength="1000" id="message" name="message" placeholder="Enter the message" required></textarea>
 				</div>
 				<button type="submit" class="btn btn-default">Submit</button>
+				<button type="reset" class="btn btn-default">Reset</button>
 			</form>
 			<br />
 		</div>
