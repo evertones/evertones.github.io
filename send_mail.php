@@ -1,7 +1,7 @@
 <?php
 	// Check if all fields have a value
 	// The interface validates with bootstrap the required fields
-	if (!empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["subject"]) && !empty($_POST["message"])) {
+	if (!empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["subject"]) && !empty($_POST["message"]) && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
 		$to = "everton.schneider@gmail.com";
 
 		$name = $_POST["name"];
@@ -20,5 +20,7 @@
 		} else { 
 			echo "FAIL";
 		}
+	} else {
+		echo "FAIL";
 	}
 ?>

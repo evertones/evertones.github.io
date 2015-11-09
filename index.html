@@ -20,7 +20,11 @@
 		$(document).ready(function(){
 			$('#submit').click(function(){
 				$.post("send_mail.php", $("#contact_form").serialize(), function(response) {
+					$('#send_success').hide();
+					$('#send_fail').hide();
+					
 					if (response == 'SUCCESS') {
+						clean_contact_form();
 						$('#send_success').show();
 					} else {
 						$('#send_fail').show();
@@ -242,12 +246,10 @@
 		
 		<div id="contact" class="row content">
 			<div id="send_success" class="alert alert-success content">
-				<a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">&times;</a>
 				<span class="glyphicon glyphicon-ok-circle"></span> <strong>Success!</strong> Your message was sent!
 			</div>
 		
 			<div id="send_fail" class="alert alert-danger content">
-				<a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">&times;</a>
 				<span class="glyphicon glyphicon-remove-circle"></span> <strong>Warning!</strong> Your message could not be sent. Please send it to everton.schneider(at)gmail.com.
 			</div>
 		
@@ -269,7 +271,7 @@
 					<textarea class="form-control" rows="5" maxlength="1000" id="message" name="message" placeholder="Enter the message" required></textarea>
 				</div>
 				<button id="submit" class="btn btn-default">Submit</button> <!-- type="submit" -->
-				<button type="reset" class="btn btn-default">Reset</button>
+				<button id="reset" type="reset" class="btn btn-default">Reset</button>
 			</form>
 			<br />
 		</div>

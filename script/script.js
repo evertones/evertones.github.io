@@ -14,6 +14,10 @@ $(document).ready(function(){
 	$("#btn_contact").click(function(){
 		show_info("contact");
 	});
+	
+	$("#reset").click(function(){
+		clean_contact_form();
+	});
 });
 
 /*
@@ -66,3 +70,9 @@ function hide_all() {
 	$("#send_fail").hide();
 }
 
+function clean_contact_form() {
+	$("#name").value = "";
+	$("#email").value = "";
+	$("#subject").value = "";
+	$("#message").value = "";
+}
