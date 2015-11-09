@@ -61,5 +61,8 @@ function hide_all() {
 	$("#social_network").hide();
 	$("#code_repo").hide();
 	$("#contact").hide();
+	
+	$("#send_success").hide();
+	$("#send_fail").hide();
 }
 
