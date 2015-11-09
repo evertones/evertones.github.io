@@ -1,18 +1,36 @@
-$(document).ready(function(){
-	$("#btn_cv").click(function(){
+/*
+Function to listen some events on the button from the navbar.
+*/
+$(document).ready(function() {
+	$("#btn_cv").click(function() {
 		show_info("cv");
 	});
 
-	$("#btn_social_network").click(function(){
+	$("#btn_social_network").click(function() {
 		show_info("social_network");
 	});
 	
-	$("#btn_code_repo").click(function(){
+	$("#btn_code_repo").click(function() {
 		show_info("code_repo");
 	});
 	
-	$("#btn_contact").click(function(){
+	$("#btn_contact").click(function() {
 		show_info("contact");
+	});
+	
+	$('#btn_submit').click(function() {
+		$.post("send_mail.php", $("#contact_form").serialize(), function(response) {
+			$('#send_success').hide();
+			$('#send_fail').hide();
+			
+			if (response == 'SUCCESS') {
+				clean_contact_form();
+				$('#send_success').show();
+			} else {
+				$('#send_fail').show();
+			}
+		});
+		return false;
 	});
 });
 
@@ -44,7 +62,7 @@ function show_mainbar() {
 }
 
 /*
-Function to hide the page header when some info is detailed. 
+Function to hide the page header when some info is detailed through the clicked on any buttom from the navbar. 
 */
 function hide_mainbar() {
 	$("#languages").hide();
@@ -54,7 +72,7 @@ function hide_mainbar() {
 }
 
 /*
-Function to hide all divs with detailed information.
+Function to hide all divs with detailed information when clicked on the button from the navbar.
 */
 function hide_all() {
 	$("#cv").hide();
@@ -62,7 +80,18 @@ function hide_all() {
 	$("#code_repo").hide();
 	$("#contact").hide();
 	
+	clean_contact_form();
+}
+
+/*
+Function to clean all fields from the contact form.
+*/
+function clean_contact_form() {
+	$("#name").val("");
+	$("#email").val("");
+	$("#subject").val("");
+	$("#message").val("");
+
 	$("#send_success").hide();
 	$("#send_fail").hide();
 }
-

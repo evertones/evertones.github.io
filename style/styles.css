@@ -24,6 +24,10 @@ div.cv {
 	margin-bottom: 20px;
 }
 
+span.blue {
+	color: blue;
+}
+
 .iconsize {
 	font-size: 30px;
 }

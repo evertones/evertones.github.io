@@ -16,16 +16,24 @@
 	<script src="script/script.js"></script>
 	<link rel="stylesheet" href="style/styles.css" type="text/css" />
 	
-	<script>
+	<!--script>
 		$(document).ready(function(){
 			$('#submit').click(function(){
 				$.post("send_mail.php", $("#contact_form").serialize(), function(response) {
-					$('#send_success').show();
+					$('#send_success').hide();
+					$('#send_fail').hide();
+					
+					if (response == 'SUCCESS') {
+						clean_contact_form();
+						$('#send_success').show();
+					} else {
+						$('#send_fail').show();
+					}
 				});
-				$('#send_fail').show();
+				return false;
 			});
 		});
-	</script>
+	</script-->
 
 </head>
 <body class="cor">
@@ -51,9 +59,9 @@
 			<!--span data-i18n="page.idioms"></span-->
 			<span>Change language:</span>
 			&nbsp;
-			<img id="img_ptBR" src="img/lang/pt-BR_small.png" height="20" />
+			<img id="img_ptBR" src="img/lang/pt-BR_small.png" height="20" onclick="alert('Sorry, it\'s still under construction!');" />
 			&nbsp;
-			<img id="img_enUS" src="img/lang/en-US_small.png" height="20" />
+			<img id="img_enUS" src="img/lang/en-US_small.png" height="20" onclick="alert('Sorry, it\'s still under construction!');" />
 		</div>
 	
 		<div id="myself" class="row">
@@ -238,16 +246,14 @@
 		
 		<div id="contact" class="row content">
 			<div id="send_success" class="alert alert-success content">
-				<a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">&times;</a>
 				<span class="glyphicon glyphicon-ok-circle"></span> <strong>Success!</strong> Your message was sent!
 			</div>
 		
 			<div id="send_fail" class="alert alert-danger content">
-				<a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">&times;</a>
-				<span class="glyphicon glyphicon-remove-circle"></span> <strong>Warning!</strong> Your message could not be sent. Please send it to everton.schneider(at)gmail.com.
+				<span class="glyphicon glyphicon-remove-circle"></span> <strong>Warning!</strong> Your message could not be sent. Please check if all fields are filled and if your email address is written correctly. If you prefer, send the message directly to <span class="blue">everton.schneider(at)gmail.com</span>.
 			</div>
 		
-			<form id="contact_form" role="form" method="post" action="send_mail.php">
+			<form id="contact_form" role="form" method="post"> <!-- action="send_mail.php" -->
 				<div class="form-group">
 					<label for="name">Your name:</label>
 					<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" maxlength="50" required>
@@ -264,8 +270,7 @@
 					<label for="message">Message:</label>
 					<textarea class="form-control" rows="5" maxlength="1000" id="message" name="message" placeholder="Enter the message" required></textarea>
 				</div>
-				<button id="submit" class="btn btn-default">Submit</button> <!-- type="submit" -->
-				<button type="reset" class="btn btn-default">Reset</button>
+				<button id="btn_submit" class="btn btn-default">Submit</button>
 			</form>
 			<br />
 		</div>
