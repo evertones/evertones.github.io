@@ -20,9 +20,13 @@
 		$(document).ready(function(){
 			$('#submit').click(function(){
 				$.post("send_mail.php", $("#contact_form").serialize(), function(response) {
-					$('#send_success').show();
+					if (response == 'SUCCESS') {
+						$('#send_success').show();
+					} else {
+						$('#send_fail').show();
+					}
 				});
-				$('#send_fail').show();
+				return false;
 			});
 		});
 	</script>
@@ -247,7 +251,7 @@
 				<span class="glyphicon glyphicon-remove-circle"></span> <strong>Warning!</strong> Your message could not be sent. Please send it to everton.schneider(at)gmail.com.
 			</div>
 		
-			<form id="contact_form" role="form" method="post" action="send_mail.php">
+			<form id="contact_form" role="form" method="post"> <!-- action="send_mail.php" -->
 				<div class="form-group">
 					<label for="name">Your name:</label>
 					<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" maxlength="50" required>

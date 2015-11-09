@@ -10,15 +10,15 @@
 		$message = $_POST["message"];
 
 		$msg =  "NAME: " . $name . "\n\n";
-		$msg += "E-MAIL: " . $email . "\n\n";
-		$msg += "MESSAGE: \n" . $message . "\n\n";
+		$msg .= "E-MAIL: " . $email . "\n\n";
+		$msg .= "MESSAGE: \n" . $message . "\n\n";
 
 		$mail_sent = mail($to, "[evertones.org] " . $subject, $msg);
 
 		if($mail_sent) {
-			echo "Sucess"
+			echo "SUCCESS";
 		} else { 
-			echo "Fail";
+			echo "FAIL";
 		}
 	}
 ?>
