@@ -16,7 +16,7 @@
 	<script src="script/script.js"></script>
 	<link rel="stylesheet" href="style/styles.css" type="text/css" />
 	
-	<script>
+	<!--script>
 		$(document).ready(function(){
 			$('#submit').click(function(){
 				$.post("send_mail.php", $("#contact_form").serialize(), function(response) {
@@ -33,7 +33,7 @@
 				return false;
 			});
 		});
-	</script>
+	</script-->
 
 </head>
 <body class="cor">
@@ -250,7 +250,7 @@
 			</div>
 		
 			<div id="send_fail" class="alert alert-danger content">
-				<span class="glyphicon glyphicon-remove-circle"></span> <strong>Warning!</strong> Your message could not be sent. Please check if all fields are filled and if your email address is written correctly. If you prefer, send the message directly to <span style="color: blue">everton.schneider(at)gmail.com</span>.
+				<span class="glyphicon glyphicon-remove-circle"></span> <strong>Warning!</strong> Your message could not be sent. Please check if all fields are filled and if your email address is written correctly. If you prefer, send the message directly to <span class="blue">everton.schneider(at)gmail.com</span>.
 			</div>
 		
 			<form id="contact_form" role="form" method="post"> <!-- action="send_mail.php" -->
@@ -271,7 +271,7 @@
 					<textarea class="form-control" rows="5" maxlength="1000" id="message" name="message" placeholder="Enter the message" required></textarea>
 				</div>
 				<button id="submit" class="btn btn-default">Submit</button> <!-- type="submit" -->
-				<button id="reset" type="reset" class="btn btn-default">Reset</button>
+				<button id="reset" class="btn btn-default">Reset</button>
 			</form>
 			<br />
 		</div>
