@@ -18,7 +18,7 @@ $(document).ready(function() {
 		show_info("contact");
 	});
 	
-	$('#submit').click(function() {
+	$('#btn_submit').click(function() {
 		$.post("send_mail.php", $("#contact_form").serialize(), function(response) {
 			$('#send_success').hide();
 			$('#send_fail').hide();
@@ -31,10 +31,6 @@ $(document).ready(function() {
 			}
 		});
 		return false;
-	});
-
-	$("#reset").click(function() {
-		clean_contact_form();
 	});
 });
 
@@ -95,7 +91,7 @@ function clean_contact_form() {
 	$("#email").value = "";
 	$("#subject").value = "";
 	$("#message").value = "";
-	
+
 	$("#send_success").hide();
 	$("#send_fail").hide();
 }
