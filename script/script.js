@@ -87,10 +87,10 @@ function hide_all() {
 Function to clean all fields from the contact form.
 */
 function clean_contact_form() {
-	$("#name").value = "";
-	$("#email").value = "";
-	$("#subject").value = "";
-	$("#message").value = "";
+	$("#name").val("");
+	$("#email").val("");
+	$("#subject").val("");
+	$("#message").val("");
 
 	$("#send_success").hide();
 	$("#send_fail").hide();
