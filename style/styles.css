@@ -2,16 +2,20 @@ body {
 	margin-top: 50px;
 }
 
-hr {
-	width: 20%; 
-	border: solid #CCC 0.5px; 
-	text-align: left;
-}
-
 div.separator {
 	padding-top: 5px;
 	padding-bottom: 10px;
 	border-bottom: solid 1px black;
+}
+
+div.smallseparator {
+	border-top: 1px solid #BBB;
+	width: 30%;
+}
+
+div.longseparator {
+	border-top: 1px solid #BBB;
+	width: 100%;
 }
 
 div.content {
@@ -22,6 +26,10 @@ div.content {
 div.cv {
 	margin-left: 20px;
 	margin-bottom: 20px;
+}
+
+img.sn_iconsize {
+	width: 60px;
 }
 
 span.blue {

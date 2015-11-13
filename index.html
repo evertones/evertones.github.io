@@ -15,25 +15,6 @@
 	<!-- Page Javascript (JS) and Style Sheet (CSS) -->
 	<script src="script/script.js"></script>
 	<link rel="stylesheet" href="style/styles.css" type="text/css" />
-	
-	<!--script>
-		$(document).ready(function(){
-			$('#submit').click(function(){
-				$.post("send_mail.php", $("#contact_form").serialize(), function(response) {
-					$('#send_success').hide();
-					$('#send_fail').hide();
-					
-					if (response == 'SUCCESS') {
-						clean_contact_form();
-						$('#send_success').show();
-					} else {
-						$('#send_fail').show();
-					}
-				});
-				return false;
-			});
-		});
-	</script-->
 
 </head>
 <body class="cor">
@@ -116,7 +97,7 @@
 				<div class="cv">
 					<h5>Bachelor's Degree in Information Systems <small>(UNISINOS - Brazil) - 2000 to 2008</small><h5>
 					<h5>Postgraduation Degree in IT Administration <small>(UNISINOS - Brazil) - 2013 to 2014</small><h5>
-					<hr />
+					<div class="smallseparator"></div>
 					<h5>Oracle Certified Professional, Java SE 6 Programmer <small>2010</small><h5>
 					<h5>Oracle Certified Professional, Java EE 5 Web Component Developer <small>2011</small><h5>
 				</div>
@@ -169,7 +150,7 @@
 						</ul>
 					</div>
 					
-					<hr />
+					<div class="longseparator"></div>
 					
 					<h4><span class="glyphicon glyphicon-map-marker"></span> CWI Software <small>(<a href="http://www.cwi.com.br/" target="_blank">website</a>) - Jul/2006 to Dec/2009</small></h4>
 					<div class="cv">
@@ -191,7 +172,8 @@
 						</ul>
 					</div>
 					
-					<hr />
+					<!--hr /-->
+					<div class="longseparator"></div>
 					
 					<h4><span class="glyphicon glyphicon-map-marker"></span> CIGAM <small>(<a href="http://www.cigam.com.br/" target="_blank">website</a>) - Jul/2004 to Jul/2006</small></h4>
 					<div class="cv">
@@ -220,27 +202,69 @@
 			</div>
 		</div>
 		
-		<div id="social_network" class="row content">	
-			<div class="col-md-6">
-			</div>
-			<div class="col-md-6 text-right">
-				<a href="https://www.linkedin.com/in/evertonschneider" target="_blank"><img src="img/icons/linkedin-icon.png" width="30px" /></a> &nbsp;
-				<a href="http://www.meetup.com/pt/members/189347405/" target="_blank"><img src="img/icons/meetup-icon.png" width="30px" /></a> &nbsp;
-				<a href="https://github.com/evertones" target="_blank"><img src="img/icons/github-icon.png" width="30px" /></a> &nbsp;
-				<a href="https://www.facebook.com/everton.schneider" target="_blank"><img src="img/icons/facebook-icon.png" width="30px" /></a> &nbsp;
-				<a href="https://instagram.com/everton_es/" target="_blank"><img src="img/icons/instagram-icon.png" width="30px" /></a> &nbsp;
-				<a href="https://www.flickr.com/photos/everton_es" target="_blank"><img src="img/icons/flickr-icon.png" width="30px" /></a> &nbsp;
+		<div id="social_network" class="content">
+			<br />
+			<div id="social_network3" class="row">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4 text-center">
+					<a href="https://www.facebook.com/everton.schneider" target="_blank"><img src="img/icons/facebook-icon.png" class="sn_iconsize" /></a> &nbsp;&nbsp;&nbsp;
+					<a href="https://instagram.com/everton_es/" target="_blank"><img src="img/icons/instagram-icon.png" class="sn_iconsize" /></a> &nbsp;&nbsp;&nbsp;
+					<a href="https://www.flickr.com/photos/everton_es" target="_blank"><img src="img/icons/flickr-icon.png" class="sn_iconsize" /></a> &nbsp;&nbsp;&nbsp;
+					<br />
+					<br />
+					<a href="https://www.linkedin.com/in/evertonschneider" target="_blank"><img src="img/icons/linkedin-icon.png" class="sn_iconsize" /></a> &nbsp;&nbsp;&nbsp;
+					<a href="http://www.meetup.com/pt/members/189347405/" target="_blank"><img src="img/icons/meetup-icon.png" class="sn_iconsize" /></a> &nbsp;&nbsp;&nbsp;
+					<a href="https://github.com/evertones" target="_blank"><img src="img/icons/github-icon.png"class="sn_iconsize" /></a> &nbsp;&nbsp;&nbsp;
+				</div>
+				<div class="col-md-4">
+				</div>
 			</div>
 		</div>
 		
-		<div id="code_repo" class="row content">
-			<div class="col-md-12">
-					<h3>Code Repo</h3>
+		<div id="code_repo" class="content">
+			<div id="code_repo1" class="row">
+				<div class="col-md-12">
+					<h3>Code Repository</h3>
 					<div class="cv">
-						This space is dedicated to show and explain some details of each code pushed to Github. <br />
-						Click on the project to see its information.
-					<br />
+						This space is intended to keep some code examples with different technologies and a very short explanation about them. <br />
+						They are all pushed to my Github account with a link to clone it (if wnated).
+					</div>
 				</div>
+			</div>
+			<br />
+			
+			<div id="code_repo2" class="row">
+				<div class="col-md-5">
+						<div class="cv">
+							<img src="img/github/gh_website.png" width="400px" style="border: solid gray 1px;" />
+					</div>
+				</div>
+				<div class="col-md-7">
+						<h4>Code: <small>Website (everones.org)</small></h4>
+						<h4>Technologies: <small>HTML, Bootstrap, CSS, Javascript, PHP</small></h4>
+						<h4>Description: <small>This is a responsive website to keep personal information, including links to external social networks and a contact form.</small></h4>
+						<h4>Github clone: <small><a href="https://github.com/evertones/website.git">https://github.com/evertones/website.git</a></small></h4>
+				</div>
+				<br />
+			</div>
+			
+			<div class="longseparator"></div>
+			<br />
+			
+			<div id="code_repo3" class="row">
+				<div class="col-md-5">
+						<div class="cv">
+							<img src="img/github/gh_website.png" width="400px" style="border: solid gray 1px;" />
+					</div>
+				</div>
+				<div class="col-md-7">
+						<h4>Code: <small>Website (everones.org)</small></h4>
+						<h4>Technologies: <small>HTML, Bootstrap, CSS, Javascript, PHP</small></h4>
+						<h4>Description: <small>This is a responsive website to keep personal information, including links to external social networks and a contact form.</small></h4>
+						<h4>Github clone: <small><a href="https://github.com/evertones/website.git">https://github.com/evertones/website.git</a></small></h4>
+				</div>
+				<br />
 			</div>
 		</div>
 		
@@ -252,8 +276,13 @@
 			<div id="send_fail" class="alert alert-danger content">
 				<span class="glyphicon glyphicon-remove-circle"></span> <strong>Warning!</strong> Your message could not be sent. Please check if all fields are filled and if your email address is written correctly. If you prefer, send the message directly to <span class="blue">everton.schneider(at)gmail.com</span>.
 			</div>
+			
+			<h3>Contact</h3>
+			<div class="cv">
+				If you want to get in touch, please fill the form or e-mail me on <span class="blue">everton.schneider(at)gmail.com</span>
+			</div>
 		
-			<form id="contact_form" role="form" method="post"> <!-- action="send_mail.php" -->
+			<form id="contact_form" role="form" method="post">
 				<div class="form-group">
 					<label for="name">Your name:</label>
 					<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" maxlength="50" required>
