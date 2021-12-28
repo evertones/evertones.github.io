@@ -1,5 +1,4 @@
-A very simple website built using basic web technologies:
-* HTML
-* Javascript
-* Bootstrap
-* CSS
+### Website
+
+This is me. 
+A simple and very basic website.
