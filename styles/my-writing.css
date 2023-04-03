@@ -1,0 +1,34 @@
+.header1 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.header2 {
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+.header3 {
+    font-size: 0.8em;
+    margin-left: 20px;
+}
+
+a.external {
+    text-decoration: none;
+    color: #59a7e8;
+}
+
+a.external:visited {
+    text-decoration: none;
+    color: #59a7e8;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+#site-body > * {
+    width: 100%;
+}
